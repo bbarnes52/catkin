@@ -9,10 +9,12 @@ if(NOT DEFINED CATKIN_TOPLEVEL)
 endif()
 message("bgb 2")
 catkin_package()
+message("bgb 3")
 
 install(FILES LICENSE
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
+message("bgb 4")
 
 # install cmake files for catkin (except some files only used at build time of catkin)
 install(DIRECTORY cmake
@@ -20,7 +22,11 @@ install(DIRECTORY cmake
   USE_SOURCE_PERMISSIONS
   PATTERN "catkinConfig.cmake.in" EXCLUDE)
 
+message("bgb 5")
+
 catkin_python_setup()
+
+message("bgb 6")
 
 if(CATKIN_ENABLE_TESTING)
   catkin_add_nosetests(test/local_tests)
